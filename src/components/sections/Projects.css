@@ -1,0 +1,119 @@
+/* ===== Projects Section ===== */
+.projects {
+  background: var(--bg-secondary);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.projects__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+}
+
+.projects__card:hover {
+  border-color: var(--primary);
+}
+
+.projects__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.projects__card-folder {
+  color: var(--primary);
+}
+
+.projects__card-links {
+  display: flex;
+  gap: 12px;
+}
+
+.projects__card-link {
+  color: var(--text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.projects__card-link:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.projects__card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: color var(--transition-fast);
+}
+
+.projects__card:hover .projects__card-title {
+  color: var(--primary);
+}
+
+.projects__card-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.projects__card-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projects__tech-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--primary-glow);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.3px;
+}
+
+/* More Button */
+.projects__more {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.projects__more-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--gradient-accent);
+  color: var(--text-on-primary);
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 20px var(--primary-glow);
+  transition: all var(--transition);
+}
+
+.projects__more-btn:hover {
+  box-shadow: 0 6px 30px var(--primary-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
